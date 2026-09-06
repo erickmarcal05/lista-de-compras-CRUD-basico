@@ -39,14 +39,5 @@
 }
 
 
-.items input[type="checkbox"]::after {
-    content: "";
-    position: absolute;
-    width: 95%;
-    height: 100%;    
-}
 
-.items input[type="checkbox"]:focus {
-    accent-color: var(--color-brand);
-}
 
