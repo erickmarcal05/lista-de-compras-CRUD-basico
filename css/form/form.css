@@ -19,6 +19,8 @@
     flex-direction: column;
     gap: 1rem;
     overflow-y: scroll;
+    height: 400px;
+    overflow-x: hidden;
 }
 
 .items input[type="checkbox"]::after {
@@ -28,6 +30,14 @@
     height: 100%;    
 }
 
-.items input[type="checkbox"]:focus {
+.items input[type="checkbox"]:checked {
     accent-color: var(--color-brand);
+
+}
+
+@media(width >= 1024px) {
+    .add-item-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 }

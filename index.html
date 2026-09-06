@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="assets/img/logo.svg" alt="">
+            <a href="#"><img src="assets/img/logo.svg" alt=""></a>
         </div>
     </header>
 
@@ -42,14 +42,14 @@
                             <p>Pão de forma</p>
                         </div>
 
-                        <button>
+                        <button id="remove-item">
                             <img src="assets/img/Frame (3).svg" alt="">
                         </button>
                     </div>
 
                     <div class="items">
                         <div>
-                            <input type="checkbox" name="items" id="item1">
+                            <input type="checkbox" name="items" id="item2">
                             <p>Café preto</p>
                         </div>
 
@@ -60,7 +60,7 @@
 
                     <div class="items">
                         <div>
-                            <input type="checkbox" name="items" id="item1">
+                            <input type="checkbox" name="items" id="item3">
                             <p>Suco de laranja</p>
                         </div>
 
@@ -71,7 +71,7 @@
 
                     <div class="items">
                         <div>
-                            <input type="checkbox" name="items" id="item1">
+                            <input type="checkbox" name="items" id="item4">
                             <p>Biscoito</p>
                         </div>
 
@@ -85,34 +85,34 @@
 
         </section>
     </main>
+
+    <footer>
+        <div class="removed-item display-none">
+            <div>
+                <img src="assets/img/warning-circle-filled.svg" alt="">
+                <p>O Item foi removido da lista</p>
+            </div>
+
+            <button>
+                <img src="assets/img/delete-small.svg" alt="">
+            </button>
+        </div>
+
+        <div class="item-added">
+
+            <div>
+                <img src="assets/img/warning-circle-filled.svg" alt="">
+                <p>O Item foi adicionado a lista</p>
+            </div>
+
+            <button>
+                <img src="assets/img/delete-small.svg" alt="">
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
-
-<footer>
-
-    <div class="removed-item display-none">
-        <div>
-            <img src="assets/img/warning-circle-filled.svg" alt="">
-            <p>O Item foi removido da lista</p>
-        </div>
-
-        <button>
-            <img src="assets/img/delete-small.svg" alt="">
-        </button>
-    </div>
-
-    <div class="item-added">
-
-        <div>
-            <img src="assets/img/warning-circle-filled.svg" alt="">
-            <p>O Item foi adicionado a lista</p>
-        </div>
-
-        <button>
-            <img src="assets/img/delete-small.svg" alt="">
-        </button>
-    </div>
-</footer>
-
 </html>
 
 <!-- 
@@ -121,5 +121,9 @@ nao coloacar 90% no input, colocar 100 no body e o input vai ficar todo e só co
 
 O jeito correto é usar uma <label> ligada ao checkbox. Assim, ao clicar no texto ou na área da label, o checkbox é marcado automaticamente.
 
-para mudar a cor de um checkbox, usa a propriedade, accent-color, e para mudar a cor quando eu marcar, é o :focus
+para mudar a cor de um checkbox, usa a propriedade, accent-color, e para mudar a cor quando eu marcar, é o :checked ====
+
+para colocar o checkbox para marcar quando eu apertar na div, eu coloquei um pseudo elemento no input checkbox, content como nada, e coloquei a largura como 100% da div e a altura tambem, ai conter toda a div, position absolute nele, e depois eu mudei a cor
+
+porem o mais certo, é englobar TUDO COM O LABEL e o id do input + o for do label vai fazer a magica de clicar na div e marcar o checkbox
 -->
