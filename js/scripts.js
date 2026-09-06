@@ -4,11 +4,13 @@ const addItemInput = document.querySelector("#add-item-input");
 const itemsOfListContainer = document.querySelector(".items-of-list");
 const items = document.querySelector(".items")
 const itemsParagraph = document.querySelector(".items p")
-const buttonDom = document.querySelector("#remove-item");
+const buttonRemoveItem = document.querySelector("#remove-item");
 
-// FOOTER
 const removedItems = document.querySelector(".removed-item");
 const itemAdded = document.querySelector(".item-added");
+
+const buttonRemovePopup1 = document.querySelector("#button-remove-popup1");
+const buttonRemovePopup2 = document.querySelector("#button-remove-popup2");
 
 
 // fazendo o user digitar apenas caracteres nao numericos
@@ -26,6 +28,8 @@ const createElement = () => {
 
     // pegando o button com a img de remover
     const button = document.createElement("button");
+    button.setAttribute("type", "button");
+
     const imgButton = document.createElement("img");
     imgButton.setAttribute("src", "assets/img/Frame (3).svg")
     button.append(imgButton);
@@ -53,8 +57,38 @@ const createElement = () => {
     // adicionando por ultimo o elemento button
     itemsContainer.append(button);
 
-    itemsOfListContainer.prepend(itemsContainer);    
+    itemsOfListContainer.prepend(itemsContainer); 
+    
+    
+    // removendo o elemento da lista
+    button.addEventListener("click", (event) => {
+        event.preventDefault()
+
+        itemsContainer.style.display = "none"
+        itemAdded.classList.remove("display-flex");
+        itemAdded.classList.add("display-none");
+
+        removedItems.classList.remove("display-none")
+        removedItems.classList.add("display-flex");
+    })
 }
+
+buttonRemovePopup1.addEventListener("click", (event) => {
+    event.preventDefault()
+    
+
+
+    removedItems.classList.remove("display-flex");
+    removedItems.classList.add("display-none")
+})
+buttonRemovePopup2.addEventListener("click", (event) => {
+    event.preventDefault()
+    
+    itemAdded.classList.remove("display-flex");
+    itemAdded.classList.add("display-none");
+
+
+})
 
 // adicionando o elemento na lista
 buttonAddItem.addEventListener("click", (event) => {
@@ -68,7 +102,14 @@ buttonAddItem.addEventListener("click", (event) => {
 
         else if(addItemInput.value) {
             createElement()
-            itemAdded.style.opacity = "1";
+            addItemInput.value = ""; // A dica principal: <input> não guarda o texto em innerText. O conteúdo digitado está em value.
+            
+
+            removedItems.classList.remove("display-flex");
+            removedItems.classList.add("display-none");
+
+            itemAdded.classList.remove("display-none");
+            itemAdded.classList.add("display-flex");
         } 
     } catch (error) {
         alert(error.message)
@@ -77,14 +118,6 @@ buttonAddItem.addEventListener("click", (event) => {
     
 
 })
-
-// removendo o elemento da lista
-buttonDom.addEventListener("click", (event) => {
-    event.preventDefault()
-    console.log("apaguei");
-})
-
-
 
 
 
@@ -144,5 +177,30 @@ mas eu fiz, com o regex, le ai e me de a dica, sem mostra codigo
 Você criou a regex corretamente, mas a validação está na ordem errada: espaços tornam o valor do input “verdadeiro”, então o primeiro if é executado antes do else if.
 
 Pense em testar primeiro se o conteúdo é vazio ou formado apenas por espaços. Só depois permita criar o item.
+====
+3) O que eu aprendi sobre o popup
+O popup foi feito usando classes de CSS para mostrar ou esconder o elemento:
 
+display-none → deixa invisível
+display-flex → deixa visível
+No JavaScript, eu alternava essas classes conforme a ação:
+
+quando adiciono um item:
+escondo o popup de remoção
+mostro o popup de adicionado
+quando removo um item:
+escondo o popup de adicionado
+mostro o popup de removido
+Isso funciona porque o elemento continua no HTML, e a aparência muda sem recarregar a página.
+
+
+5) Dica importante
+Quando um botão está dentro de um form, sempre verificar se ele está com:
+
+type="submit" → envia o formulário
+type="button" → só executa o JavaScript
+
+====
+
+A dica principal: <input> não guarda o texto em innerText. O conteúdo digitado está em value.
 */

@@ -29,25 +29,25 @@
 
             <div class="pop-up">
 
-                <div class="removed-item">
+                <div class="removed-item display-none">
                     <div>
                         <img src="assets/img/warning-circle-filled.svg" alt="">
                         <p>O Item foi removido da lista</p>
                     </div>
 
-                    <button>
+                    <button id="button-remove-popup1">
                         <img src="assets/img/delete-small.svg" alt="">
                     </button>
                 </div>
 
-                <div class="item-added">
 
+                <div class="item-added display-none">
                     <div>
                         <img src="assets/img/warning-circle-filled.svg" alt="">
                         <p>O Item foi adicionado a lista</p>
                     </div>
 
-                    <button>
+                    <button id="button-remove-popup2">
                         <img src="assets/img/delete-small.svg" alt="">
                     </button>
                 </div>
@@ -62,49 +62,7 @@
 
                 <div class="items-of-list">
 
-                    <div class="items">
-                        <div>
-                            <input type="checkbox" name="items" id="item1">
-                            <p>Pão de forma</p>
-                        </div>
-
-                        <button id="remove-item">
-                            <img src="assets/img/Frame (3).svg" alt="">
-                        </button>
-                    </div>
-
-                    <div class="items">
-                        <div>
-                            <input type="checkbox" name="items" id="item2">
-                            <p>Café preto</p>
-                        </div>
-
-                        <button>
-                            <img src="assets/img/Frame (3).svg" alt="">
-                        </button>
-                    </div>
-
-                    <div class="items">
-                        <div>
-                            <input type="checkbox" name="items" id="item3">
-                            <p>Suco de laranja</p>
-                        </div>
-
-                        <button>
-                            <img src="assets/img/Frame (3).svg" alt="">
-                        </button>
-                    </div>
-
-                    <div class="items">
-                        <div>
-                            <input type="checkbox" name="items" id="item4">
-                            <p>Biscoito</p>
-                        </div>
-
-                        <button>
-                            <img src="assets/img/Frame (3).svg" alt="">
-                        </button>
-                    </div>
+                    <!-- aqui vão os elementos adicionados do JS -->
                     
                 </div>
             </form>
@@ -127,4 +85,6 @@ para mudar a cor de um checkbox, usa a propriedade, accent-color, e para mudar a
 para colocar o checkbox para marcar quando eu apertar na div, eu coloquei um pseudo elemento no input checkbox, content como nada, e coloquei a largura como 100% da div e a altura tambem, ai conter toda a div, position absolute nele, e depois eu mudei a cor
 
 porem o mais certo, é englobar TUDO COM O LABEL e o id do input + o for do label vai fazer a magica de clicar na div e marcar o checkbox
+
+usar o overflow-y: auto; para colocar a barra de rolagem, se usar o scroll, o navegador ira resevar a barra de rolagem sem nem ter conteúdo dentro do container, se usar o auto, só cria a barra se o conteudo execeder a altura que colocamos
 -->

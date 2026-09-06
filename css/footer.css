@@ -1,11 +1,4 @@
-footer {
-    margin-top: 2rem;
-
-
-}
-
 .removed-item, .item-added {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -44,12 +37,10 @@ footer {
     }
 }
 
-.removed-item {
-    display: none;
-}
+
 
 .item-added {
     background-color: green;
-    opacity: 0;
+
 }
 

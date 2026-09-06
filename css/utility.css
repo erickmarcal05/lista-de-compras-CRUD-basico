@@ -46,4 +46,8 @@
     display: block;
 }
 
+.display-flex { /* usar nos popup no JS*/
+    display: flex;
+}
+
 
