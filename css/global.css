@@ -6,6 +6,10 @@
 
 body {
     font-family: var(--font-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2rem 4rem;
 }
 
 
@@ -38,8 +42,14 @@ body {
     --label: 600 1rem/1.25rem var(--font-family);
     --paragraph: 500 1rem/1.25rem var(--font-family);
     --link: 500 .875rem/1rem var(--font-family);
-    
+}
 
+a {
+    text-decoration: none;
+}
+
+span {
+    color: var(--color-brand);
 }
 
 

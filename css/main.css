@@ -1,0 +1,19 @@
+.back a  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    & img {
+        width: 20px;
+    }
+       
+}
+
+.form-wrapper {
+
+    & h1 {
+        font: var(--title);
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+}
