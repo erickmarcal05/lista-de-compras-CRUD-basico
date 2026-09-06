@@ -6,10 +6,24 @@
 
 body {
     font-family: var(--font-family);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-block: 2rem 4rem;
+    padding-inline: 1rem;
+    background-color: var(--background-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    color: var(--color-brand);
+}
+
+input {
+    border: 1px solid var(--border-primary);
+    outline: none;
+    border-radius: .8rem;
+    padding: 10px 24px;
 }
 
 
@@ -44,12 +58,6 @@ body {
     --link: 500 .875rem/1rem var(--font-family);
 }
 
-a {
-    text-decoration: none;
-}
 
-span {
-    color: var(--color-brand);
-}
 
 

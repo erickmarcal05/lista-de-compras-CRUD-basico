@@ -12,3 +12,41 @@
         background-color: var(--color-brand-hover);
     }
 }
+
+.items {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--background-secondary);
+    padding: 1rem;
+    border-radius: .8rem;
+
+    & > div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    & button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+.items input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 100%;    
+}
+
+.items input[type="checkbox"]:focus {
+    accent-color: var(--color-brand);
+}
+
