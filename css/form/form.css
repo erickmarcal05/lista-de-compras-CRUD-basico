@@ -26,7 +26,7 @@
 .items input[type="checkbox"]::after {
     content: "";
     position: absolute;
-    width: 95%;
+    width: 71%;
     height: 100%;    
 }
 
