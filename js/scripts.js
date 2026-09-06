@@ -4,7 +4,11 @@ const addItemInput = document.querySelector("#add-item-input");
 const itemsOfListContainer = document.querySelector(".items-of-list");
 const items = document.querySelector(".items")
 const itemsParagraph = document.querySelector(".items p")
-const buttonDom = document.querySelector("#remove-item")
+const buttonDom = document.querySelector("#remove-item");
+
+// FOOTER
+const removedItems = document.querySelector(".removed-item");
+const itemAdded = document.querySelector(".item-added");
 
 
 // fazendo o user digitar apenas caracteres nao numericos
@@ -13,6 +17,7 @@ addItemInput.addEventListener("input", (event) => {
     addItemInput.value = addItemInput.value.replace(hasNumberRegex, "");
 });
 
+// função para adicionar o elemento na lista
 const createElement = () => {
 
     // criando o elemento input, e colocando o atributo checkbox nele
@@ -63,7 +68,7 @@ buttonAddItem.addEventListener("click", (event) => {
 
         else if(addItemInput.value) {
             createElement()
-
+            itemAdded.style.opacity = "1";
         } 
     } catch (error) {
         alert(error.message)

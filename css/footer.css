@@ -44,9 +44,12 @@ footer {
     }
 }
 
+.removed-item {
+    display: none;
+}
 
 .item-added {
     background-color: green;
-    
+    opacity: 0;
 }
 
