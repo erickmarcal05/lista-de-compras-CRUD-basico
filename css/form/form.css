@@ -26,13 +26,17 @@
 .items input[type="checkbox"]::after {
     content: "";
     position: absolute;
-    width: 95%;
+    width: 72%;
     height: 100%;    
 }
 
 .items input[type="checkbox"]:checked {
     accent-color: var(--color-brand);
 
+}
+
+.items button {
+    height: 100%;
 }
 
 @media(width >= 1024px) {
