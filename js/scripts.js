@@ -1,6 +1,6 @@
 // pegando os elementos 
 const buttonAddItem = document.querySelector(".btn-add-item");
-const addItemInput = document.querySelector("#add-item-input");
+const addItemInput = document.getElementById("add-item-input");
 const itemsOfListContainer = document.querySelector(".items-of-list");
 const items = document.querySelector(".items")
 const itemsParagraph = document.querySelector(".items p")
@@ -64,7 +64,7 @@ const createElement = () => {
     button.addEventListener("click", (event) => {
         event.preventDefault()
 
-        itemsContainer.style.display = "none"
+        itemsContainer.style.display = "none";
         itemAdded.classList.remove("display-flex");
         itemAdded.classList.add("display-none");
 
